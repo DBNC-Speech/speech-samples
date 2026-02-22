@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech Compression - Audio Samples</title>
     <style>
-        /* Yeni sütunlar sığsın diye max-width değerini 900px'den 1100px'e çıkardık */
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1100px; margin: 40px auto; padding: 20px; color: #333; }
         h2 { text-align: center; color: #2c3e50; }
-        p { text-align: center; margin-bottom: 30px; color: #555; }
-        table { border-collapse: collapse; width: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        th, td { border: 1px solid #ddd; padding: 15px; text-align: center; vertical-align: middle; }
+        p { text-align: center; margin-bottom: 40px; color: #555; }
+        
+        /* Veri kümesi başlıkları için yeni stil */
+        .dataset-title { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
+        .dataset-desc { font-size: 0.9em; color: #666; margin-bottom: 15px; }
+
+        table { border-collapse: collapse; width: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; vertical-align: middle; }
         th { background-color: #f8f9fa; font-weight: bold; color: #2c3e50; }
         tr:nth-child(even) { background-color: #fdfdfd; }
         audio { width: 100%; min-width: 200px; outline: none; }
-        .metric { font-weight: bold; color: #0056b3; } /* Metrikleri vurgulamak için mavi ton */
+        .metric { font-weight: bold; color: #2c3e50; }
     </style>
 </head>
 <body>
@@ -22,60 +26,73 @@
     <h2>Speech Compression - Audio Samples for Review</h2>
     <p>This page contains the audio samples discussed in the submitted manuscript.<br>Please use headphones for the best listening experience.</p>
 
+    <h3 class="dataset-title">1. LibriSpeech Dataset (English)</h3>
+    <div class="dataset-desc">Multi-speaker English speech samples from read audiobooks.</div>
     <table>
         <thead>
             <tr>
-                <th>Sample</th>
+                <th>Sample ID</th>
                 <th>Original Audio</th>
                 <th>Reconstructed Audio</th>
-                <th>Bitrate (kbps)</th> <th>PESQ Score</th>     </tr>
+                <th>Bitrate (kbps)</th>
+                <th>PESQ Score</th>
+            </tr>
         </thead>
         <tbody>
-            
             <tr>
-                <td><strong>Sample 1</strong></td>
-                <td>
-                    <audio controls preload="metadata">
-                        <source src="audio/orig_1.wav" type="audio/wav">
-                        Your browser does not support the audio element.
-                    </audio>
-                </td>
-                <td>
-                    <audio controls preload="metadata">
-                        <source src="audio/recon_1.wav" type="audio/wav">
-                    </audio>
-                </td>
-                <td class="metric">8.0</td> <td class="metric">3.45</td> </tr>
+                <td><strong>LS_Sample_1</strong></td>
+                <td><audio controls preload="metadata"><source src="audio/ls_orig_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls preload="metadata"><source src="audio/ls_recon_1.wav" type="audio/wav"></audio></td>
+                <td class="metric">8.0</td>
+                <td class="metric">3.45</td>
+            </tr>
+            </tbody>
+    </table>
 
+    <h3 class="dataset-title">2. VOA Turkish Dataset (Turkish)</h3>
+    <div class="dataset-desc">Turkish broadcast news speech samples.</div>
+    <table>
+        <thead>
             <tr>
-                <td><strong>Sample 2</strong></td>
-                <td>
-                    <audio controls preload="metadata">
-                        <source src="audio/orig_2.wav" type="audio/wav">
-                    </audio>
-                </td>
-                <td>
-                    <audio controls preload="metadata">
-                        <source src="audio/recon_2.wav" type="audio/wav">
-                    </audio>
-                </td>
-                <td class="metric">4.0</td> <td class="metric">2.85</td> </tr>
-
+                <th>Sample ID</th>
+                <th>Original Audio</th>
+                <th>Reconstructed Audio</th>
+                <th>Bitrate (kbps)</th>
+                <th>PESQ Score</th>
+            </tr>
+        </thead>
+        <tbody>
             <tr>
-                <td><strong>Sample 3</strong></td>
-                <td>
-                    <audio controls preload="metadata">
-                        <source src="audio/orig_3.wav" type="audio/wav">
-                    </audio>
-                </td>
-                <td>
-                    <audio controls preload="metadata">
-                        <source src="audio/recon_3.wav" type="audio/wav">
-                    </audio>
-                </td>
-                <td class="metric">2.4</td> <td class="metric">2.10</td> </tr>
+                <td><strong>VOA_Sample_1</strong></td>
+                <td><audio controls preload="metadata"><source src="audio/voa_orig_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls preload="metadata"><source src="audio/voa_recon_1.wav" type="audio/wav"></audio></td>
+                <td class="metric">4.0</td>
+                <td class="metric">2.85</td>
+            </tr>
+            </tbody>
+    </table>
 
-        </tbody>
+    <h3 class="dataset-title">3. LJSpeech Dataset (English)</h3>
+    <div class="dataset-desc">Single-speaker English speech samples from public domain books.</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Sample ID</th>
+                <th>Original Audio</th>
+                <th>Reconstructed Audio</th>
+                <th>Bitrate (kbps)</th>
+                <th>PESQ Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>LJ_Sample_1</strong></td>
+                <td><audio controls preload="metadata"><source src="audio/lj_orig_1.wav" type="audio/wav"></audio></td>
+                <td><audio controls preload="metadata"><source src="audio/lj_recon_1.wav" type="audio/wav"></audio></td>
+                <td class="metric">2.4</td>
+                <td class="metric">2.10</td>
+            </tr>
+            </tbody>
     </table>
 
 </body>
