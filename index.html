@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech Compression - Audio Samples</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; color: #333; }
+        /* Yeni sütunlar sığsın diye max-width değerini 900px'den 1100px'e çıkardık */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1100px; margin: 40px auto; padding: 20px; color: #333; }
         h2 { text-align: center; color: #2c3e50; }
         p { text-align: center; margin-bottom: 30px; color: #555; }
         table { border-collapse: collapse; width: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         th, td { border: 1px solid #ddd; padding: 15px; text-align: center; vertical-align: middle; }
         th { background-color: #f8f9fa; font-weight: bold; color: #2c3e50; }
         tr:nth-child(even) { background-color: #fdfdfd; }
-        audio { width: 100%; min-width: 220px; outline: none; }
+        audio { width: 100%; min-width: 200px; outline: none; }
+        .metric { font-weight: bold; color: #0056b3; } /* Metrikleri vurgulamak için mavi ton */
     </style>
 </head>
 <body>
@@ -26,7 +28,7 @@
                 <th>Sample</th>
                 <th>Original Audio</th>
                 <th>Reconstructed Audio</th>
-            </tr>
+                <th>Bitrate (kbps)</th> <th>PESQ Score</th>     </tr>
         </thead>
         <tbody>
             
@@ -41,10 +43,9 @@
                 <td>
                     <audio controls preload="metadata">
                         <source src="audio/recon_1.wav" type="audio/wav">
-                        Your browser does not support the audio element.
                     </audio>
                 </td>
-            </tr>
+                <td class="metric">8.0</td> <td class="metric">3.45</td> </tr>
 
             <tr>
                 <td><strong>Sample 2</strong></td>
@@ -58,7 +59,7 @@
                         <source src="audio/recon_2.wav" type="audio/wav">
                     </audio>
                 </td>
-            </tr>
+                <td class="metric">4.0</td> <td class="metric">2.85</td> </tr>
 
             <tr>
                 <td><strong>Sample 3</strong></td>
@@ -72,7 +73,7 @@
                         <source src="audio/recon_3.wav" type="audio/wav">
                     </audio>
                 </td>
-            </tr>
+                <td class="metric">2.4</td> <td class="metric">2.10</td> </tr>
 
         </tbody>
     </table>
