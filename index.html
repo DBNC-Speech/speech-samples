@@ -9,7 +9,7 @@
         h2 { text-align: center; color: #2c3e50; }
         p { text-align: center; margin-bottom: 40px; color: #555; }
         
-        /* Veri kümesi başlıkları için yeni stil */
+        /* Veri kümesi başlıkları için stil */
         .dataset-title { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
         .dataset-desc { font-size: 0.9em; color: #666; margin-bottom: 15px; }
 
@@ -29,11 +29,12 @@
 
     <h3 class="dataset-title">1. LibriSpeech Dataset (English)</h3>
     <div class="dataset-desc">Multi-speaker English speech samples from read audiobooks.</div>
-<table>
+    <table>
         <thead>
             <tr>
                 <th>Sample ID</th>
-                <th>Speech Samples</th> <th>Bitrate (kbps)</th>
+                <th>Speech Samples</th> 
+                <th>Bitrate (kbps)</th>
                 <th>PESQ Score</th>
             </tr>
         </thead>
@@ -60,6 +61,22 @@
                 <td>
                     <div style="margin-bottom: 10px;">
                         <span style="font-size: 0.85em; color: #555;">Original:</span><br>
+                        <audio controls preload="metadata"><source src="audio/ls_orig_4.wav" type="audio/wav"></audio>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.85em; color: #555;">Reconstructed:</span><br>
+                        <audio controls preload="metadata"><source src="audio/ls_recon_4.wav" type="audio/wav"></audio>
+                    </div>
+                </td>
+                <td class="metric">3.2</td>
+                <td class="metric">3.78</td>
+            </tr>
+
+            <tr>
+                <td><strong>LS_Sample_3</strong></td>
+                <td>
+                    <div style="margin-bottom: 10px;">
+                        <span style="font-size: 0.85em; color: #555;">Original:</span><br>
                         <audio controls preload="metadata"><source src="audio/ls_orig_2.wav" type="audio/wav"></audio>
                     </div>
                     <div>
@@ -72,7 +89,23 @@
             </tr>
 
             <tr>
-                <td><strong>LS_Sample_3</strong></td>
+                <td><strong>LS_Sample_4</strong></td>
+                <td>
+                    <div style="margin-bottom: 10px;">
+                        <span style="font-size: 0.85em; color: #555;">Original:</span><br>
+                        <audio controls preload="metadata"><source src="audio/ls_orig_5.wav" type="audio/wav"></audio>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.85em; color: #555;">Reconstructed:</span><br>
+                        <audio controls preload="metadata"><source src="audio/ls_recon_5.wav" type="audio/wav"></audio>
+                    </div>
+                </td>
+                <td class="metric">1.6</td>
+                <td class="metric">3.13</td>
+            </tr>
+
+            <tr>
+                <td><strong>LS_Sample_5</strong></td>
                 <td>
                     <div style="margin-bottom: 10px;">
                         <span style="font-size: 0.85em; color: #555;">Original:</span><br>
@@ -87,37 +120,6 @@
                 <td class="metric">1.42</td>
             </tr>
 
-            <tr>
-                <td><strong>LS_Sample_4</strong></td>
-                <td>
-                    <div style="margin-bottom: 10px;">
-                        <span style="font-size: 0.85em; color: #555;">Original:</span><br>
-                        <audio controls preload="metadata"><source src="audio/ls_orig_4.wav" type="audio/wav"></audio>
-                    </div>
-                    <div>
-                        <span style="font-size: 0.85em; color: #555;">Reconstructed:</span><br>
-                        <audio controls preload="metadata"><source src="audio/ls_recon_4.wav" type="audio/wav"></audio>
-                    </div>
-                </td>
-                <td class="metric">3.2</td>
-                <td class="metric">3.78</td>
-            </tr>
-
-            <tr>
-                <td><strong>LS_Sample_5</strong></td>
-                <td>
-                    <div style="margin-bottom: 10px;">
-                        <span style="font-size: 0.85em; color: #555;">Original:</span><br>
-                        <audio controls preload="metadata"><source src="audio/ls_orig_5.wav" type="audio/wav"></audio>
-                    </div>
-                    <div>
-                        <span style="font-size: 0.85em; color: #555;">Reconstructed:</span><br>
-                        <audio controls preload="metadata"><source src="audio/ls_recon_5.wav" type="audio/wav"></audio>
-                    </div>
-                </td>
-                <td class="metric">1.6</td>
-                <td class="metric">3.13</td>
-            </tr>
 
             <tr>
                 <td><strong>LS_Sample_6</strong></td>
@@ -135,6 +137,7 @@
                 <td class="metric">2.03</td>
             </tr>
         </tbody>
+    </table>
    
 
     <h3 class="dataset-title">2. LJSpeech Dataset (English)</h3>
@@ -143,66 +146,109 @@
         <thead>
             <tr>
                 <th>Sample ID</th>
-                <th>Original Speech</th>
-                <th>Reconstructed Speech</th>
-                <th>Bitrate (kbps)</th>
+                <th>Speech Samples</th> <th>Bitrate (kbps)</th>
                 <th>PESQ Score</th>
             </tr>
         </thead>
         <tbody>
+            
             <tr>
                 <td><strong>LJ_Sample_1</strong></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_orig_1.wav" type="audio/wav"></audio></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_recon_1.wav" type="audio/wav"></audio></td>
+                <td>
+                    <div style="margin-bottom: 10px;">
+                        <span style="font-size: 0.85em; color: #555;">Original:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_orig_1.wav" type="audio/wav"></audio>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.85em; color: #555;">Reconstructed:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_recon_1.wav" type="audio/wav"></audio>
+                    </div>
+                </td>
                 <td class="metric">3.2</td>
                 <td class="metric">3.45</td>
             </tr>
-            </tbody>
 
             <tr>
                 <td><strong>LJ_Sample_2</strong></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_orig_2.wav" type="audio/wav"></audio></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_recon_2.wav" type="audio/wav"></audio></td>
+                <td>
+                    <div style="margin-bottom: 10px;">
+                        <span style="font-size: 0.85em; color: #555;">Original:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_orig_2.wav" type="audio/wav"></audio>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.85em; color: #555;">Reconstructed:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_recon_2.wav" type="audio/wav"></audio>
+                    </div>
+                </td>
                 <td class="metric">3.2</td>
                 <td class="metric">2.78</td>
             </tr>
-            </tbody>
 
             <tr>
                 <td><strong>LJ_Sample_3</strong></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_orig_3.wav" type="audio/wav"></audio></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_recon_3.wav" type="audio/wav"></audio></td>
+                <td>
+                    <div style="margin-bottom: 10px;">
+                        <span style="font-size: 0.85em; color: #555;">Original:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_orig_3.wav" type="audio/wav"></audio>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.85em; color: #555;">Reconstructed:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_recon_3.wav" type="audio/wav"></audio>
+                    </div>
+                </td>
                 <td class="metric">1.6</td>
                 <td class="metric">2.73</td>
             </tr>
-            </tbody>
 
             <tr>
                 <td><strong>LJ_Sample_4</strong></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_orig_4.wav" type="audio/wav"></audio></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_recon_4.wav" type="audio/wav"></audio></td>
+                <td>
+                    <div style="margin-bottom: 10px;">
+                        <span style="font-size: 0.85em; color: #555;">Original:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_orig_4.wav" type="audio/wav"></audio>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.85em; color: #555;">Reconstructed:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_recon_4.wav" type="audio/wav"></audio>
+                    </div>
+                </td>
                 <td class="metric">1.6</td>
                 <td class="metric">1.90</td>
             </tr>
-            </tbody>
 
             <tr>
                 <td><strong>LJ_Sample_5</strong></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_orig_5.wav" type="audio/wav"></audio></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_recon_5.wav" type="audio/wav"></audio></td>
+                <td>
+                    <div style="margin-bottom: 10px;">
+                        <span style="font-size: 0.85em; color: #555;">Original:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_orig_5.wav" type="audio/wav"></audio>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.85em; color: #555;">Reconstructed:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_recon_5.wav" type="audio/wav"></audio>
+                    </div>
+                </td>
                 <td class="metric">0.8</td>
                 <td class="metric">1.67</td>
             </tr>
-            </tbody>
 
             <tr>
                 <td><strong>LJ_Sample_6</strong></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_orig_6.wav" type="audio/wav"></audio></td>
-                <td><audio controls preload="metadata"><source src="audio/lj_recon_6.wav" type="audio/wav"></audio></td>
+                <td>
+                    <div style="margin-bottom: 10px;">
+                        <span style="font-size: 0.85em; color: #555;">Original:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_orig_6.wav" type="audio/wav"></audio>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.85em; color: #555;">Reconstructed:</span><br>
+                        <audio controls preload="metadata"><source src="audio/lf_recon_6.wav" type="audio/wav"></audio>
+                    </div>
+                </td>
                 <td class="metric">0.8</td>
                 <td class="metric">1.20</td>
             </tr>
-            </tbody>
+
+        </tbody>
     </table>
 
 </body>
